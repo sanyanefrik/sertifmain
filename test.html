@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smooth Scroll</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Плавный скроллинг */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    color: lightgray; /* Цвет при наведении */
+}
+
+section {
+    height: 500px; /* Просто для демонстрации прокрутки */
+}
+
+/* Добавим анимацию для плавного перехода с задержкой 2 секунды */
+body {
+    animation: scrollAnimation 2s ease-in-out;
+}
+
+@keyframes scrollAnimation {
+    to {
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#section1">Раздел 1</a></li>
+                <li><a href="#section2">Раздел 2</a></li>
+                <li><a href="#section3">Раздел 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h2>Раздел 1</h2>
+        <!-- Содержимое раздела 1 -->
+    </section>
+
+    <section id="section2">
+        <h2>Раздел 2</h2>
+        <!-- Содержимое раздела 2 -->
+    </section>
+
+    <section id="section3">
+        <h2>Раздел 3</h2>
+        <!-- Содержимое раздела 3 -->
+    </section>
+</body>
+</html>
